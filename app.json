@@ -14,7 +14,8 @@
         "ADMIN": {
             "description": "Admin ids, Get using @my_id_bot [You can multiple for example: 1112223334, 667788990, 8897765454]",
             "required": true
-        },
+        }
+    },
     "addons": [],
     "buildpacks": [
         {
