@@ -5,6 +5,7 @@ from datetime import datetime
 import pytz
 from fpdf import FPDF
 import asyncio 
+from config import ADMIN
 bot = Client("databt",
              bot_token="7196294857:AAEBOmgpBcppLN2IEpsTyBcUI9ef7zPjDpc",
              api_id=17249531,
@@ -16,7 +17,7 @@ idstoring = db["ids"]
 indian_timezone = pytz.timezone("Asia/Kolkata")
 
 
-admins = [6121699672,7058869460]
+admins = [int(admin_id) for admin_id in ADMIN.split(',')]
 
 
 @bot.on_message(filters.command("start"))
